@@ -1,12 +1,8 @@
-% Program menghitung luas permukaan prisma
-clc;
-disp('Menghitung Luas Permukaan Prisma');
-disp('---------------------------------');
+% Program menghitung volume & luas permukaan prisma
+function[volume, luas_permukaan] = hitung_prisma_123210078(aSegitiga, tSegitiga, tPrisma)
+sisi_miring = sqrt(aSegitiga.^2 + tSegitiga.^2);
+keliling_alas = aSegitiga + tSegitiga + sisi_miring;
+luas_alas = aSegitiga * tSegitiga / 2;
 
-% Input
-aSegitiga = input('Alas Segitiga > ');
-tSegitiga = input('Tinggi Segitiga > ');
-tPrisma = input('Tinggi Prisma > ');
-
-hasil = (aSegitiga * tSegitiga / 2) * tPrisma;
-disp(['Luas Permukaan: ', num2str(hasil)]);
+volume = luas_alas * tPrisma;
+luas_permukaan = (2 * luas_alas) + (keliling_alas * tPrisma);
