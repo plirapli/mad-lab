@@ -1,29 +1,5 @@
 function varargout = tahun_kabisat(varargin)
-% TAHUN_KABISAT MATLAB code for tahun_kabisat.fig
-%      TAHUN_KABISAT, by itself, creates a new TAHUN_KABISAT or raises the existing
-%      singleton*.
-%
-%      H = TAHUN_KABISAT returns the handle to a new TAHUN_KABISAT or the handle to
-%      the existing singleton*.
-%
-%      TAHUN_KABISAT('CALLBACK',hObject,eventData,handles,...) calls the local
-%      function named CALLBACK in TAHUN_KABISAT.M with the given input arguments.
-%
-%      TAHUN_KABISAT('Property','Value',...) creates a new TAHUN_KABISAT or raises the
-%      existing singleton*.  Starting from the left, property value pairs are
-%      applied to the GUI before tahun_kabisat_OpeningFcn gets called.  An
-%      unrecognized property name or invalid value makes property application
-%      stop.  All inputs are passed to tahun_kabisat_OpeningFcn via varargin.
-%
-%      *See GUI Options on GUIDE's Tools menu.  Choose "GUI allows only one
-%      instance to run (singleton)".
-%
-% See also: GUIDE, GUIDATA, GUIHANDLES
-
-% Edit the above text to modify the response to help tahun_kabisat
-
 % Last Modified by GUIDE v2.5 28-Feb-2023 12:11:38
-
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
 gui_State = struct('gui_Name',       mfilename, ...
