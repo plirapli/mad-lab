@@ -2,7 +2,6 @@
 % untuk menghitung jumlah kombinasi
 % dari sejumlah populasi
 % Menampilkan judul program
-
 clc;
 disp('Menghitung Jumlah Kombinasi');
 disp('---------------------');
@@ -35,4 +34,4 @@ end
 kombinasi = faktor_n / (faktor_m * faktor_r);
 
 % Menampilkan keluaran
-disp(['Jumlah kombinasi yang ada = ',num2str(kombinasi)]);
+disp(['Jumlah kombinasi yang ada = ', num2str(kombinasi)]);
