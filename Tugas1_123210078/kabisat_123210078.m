@@ -1,11 +1,35 @@
-function varargout = tahun_kabisat(varargin)
-% Last Modified by GUIDE v2.5 28-Feb-2023 12:11:38
+function varargout = kabisat_123210078(varargin)
+% KABISAT_123210078 MATLAB code for kabisat_123210078.fig
+%      KABISAT_123210078, by itself, creates a new KABISAT_123210078 or raises the existing
+%      singleton*.
+%
+%      H = KABISAT_123210078 returns the handle to a new KABISAT_123210078 or the handle to
+%      the existing singleton*.
+%
+%      KABISAT_123210078('CALLBACK',hObject,eventData,handles,...) calls the local
+%      function named CALLBACK in KABISAT_123210078.M with the given input arguments.
+%
+%      KABISAT_123210078('Property','Value',...) creates a new KABISAT_123210078 or raises the
+%      existing singleton*.  Starting from the left, property value pairs are
+%      applied to the GUI before kabisat_123210078_OpeningFcn gets called.  An
+%      unrecognized property name or invalid value makes property application
+%      stop.  All inputs are passed to kabisat_123210078_OpeningFcn via varargin.
+%
+%      *See GUI Options on GUIDE's Tools menu.  Choose "GUI allows only one
+%      instance to run (singleton)".
+%
+% See also: GUIDE, GUIDATA, GUIHANDLES
+
+% Edit the above text to modify the response to help kabisat_123210078
+
+% Last Modified by GUIDE v2.5 28-Feb-2023 22:42:45
+
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
 gui_State = struct('gui_Name',       mfilename, ...
                    'gui_Singleton',  gui_Singleton, ...
-                   'gui_OpeningFcn', @tahun_kabisat_OpeningFcn, ...
-                   'gui_OutputFcn',  @tahun_kabisat_OutputFcn, ...
+                   'gui_OpeningFcn', @kabisat_123210078_OpeningFcn, ...
+                   'gui_OutputFcn',  @kabisat_123210078_OutputFcn, ...
                    'gui_LayoutFcn',  [] , ...
                    'gui_Callback',   []);
 if nargin && ischar(varargin{1})
@@ -20,26 +44,26 @@ end
 % End initialization code - DO NOT EDIT
 
 
-% --- Executes just before tahun_kabisat is made visible.
-function tahun_kabisat_OpeningFcn(hObject, eventdata, handles, varargin)
+% --- Executes just before kabisat_123210078 is made visible.
+function kabisat_123210078_OpeningFcn(hObject, eventdata, handles, varargin)
 % This function has no output args, see OutputFcn.
 % hObject    handle to figure
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
-% varargin   command line arguments to tahun_kabisat (see VARARGIN)
+% varargin   command line arguments to kabisat_123210078 (see VARARGIN)
 
-% Choose default command line output for tahun_kabisat
+% Choose default command line output for kabisat_123210078
 handles.output = hObject;
 
 % Update handles structure
 guidata(hObject, handles);
 
-% UIWAIT makes tahun_kabisat wait for user response (see UIRESUME)
+% UIWAIT makes kabisat_123210078 wait for user response (see UIRESUME)
 % uiwait(handles.figure1);
 
 
 % --- Outputs from this function are returned to the command line.
-function varargout = tahun_kabisat_OutputFcn(hObject, eventdata, handles) 
+function varargout = kabisat_123210078_OutputFcn(hObject, eventdata, handles) 
 % varargout  cell array for returning output args (see VARARGOUT);
 % hObject    handle to figure
 % eventdata  reserved - to be defined in a future version of MATLAB
@@ -50,41 +74,18 @@ varargout{1} = handles.output;
 
 
 
-function input_Callback(hObject, eventdata, handles)
-% hObject    handle to input (see GCBO)
+function inputTahun_Callback(hObject, eventdata, handles)
+% hObject    handle to inputTahun (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of input as text
-%        str2double(get(hObject,'String')) returns contents of input as a double
+% Hints: get(hObject,'String') returns contents of inputTahun as text
+%        str2double(get(hObject,'String')) returns contents of inputTahun as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function input_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to input (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    empty - handles not created until after all CreateFcns called
-
-% Hint: edit controls usually have a white background on Windows.
-%       See ISPC and COMPUTER.
-if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
-    set(hObject,'BackgroundColor','white');
-end
-
-
-
-function hasil_Callback(hObject, eventdata, handles)
-% hObject    handle to hasil (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-
-% Hints: get(hObject,'String') returns contents of hasil as text
-%        str2double(get(hObject,'String')) returns contents of hasil as a double
-
-
-% --- Executes during object creation, after setting all properties.
-function hasil_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to hasil (see GCBO)
+function inputTahun_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to inputTahun (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -101,7 +102,7 @@ function btnCek_Callback(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-angkaInputStr = get(handles.input,'string'); % get input angka
+angkaInputStr = get(handles.inputTahun,'string'); % get input angka
 angkaInput = str2double(angkaInputStr); % mengubah string menjadi double
 hasil = rem(angkaInput, 4); % menghitung input
 
@@ -111,4 +112,10 @@ else
     output = "Tahun biasa";
 end
 
-set(handles.hasil,'string',(output)) % menampilkan hasil
+set(handles.textHasil,'string',(output)) % menampilkan hasil
+
+% --- Executes during object creation, after setting all properties.
+function textHasil_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to textHasil (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
