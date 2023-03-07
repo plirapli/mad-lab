@@ -1,0 +1,40 @@
+[System]
+Name='bonus_pelayanan'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=3
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='Pelayanan'
+Range=[0 1]
+NumMFs=3
+MF1='Mengecewakan':'gaussmf',[0.1769 -1.388e-17]
+MF2='Bagus':'gaussmf',[0.1769 0.5]
+MF3='Memuaskan':'gaussmf',[0.1769 1]
+
+[Input2]
+Name='Makanan'
+Range=[0 1]
+NumMFs=2
+MF1='Hambar':'trimf',[-4 0 0.7]
+MF2='Enak':'trimf',[0.3 1 4]
+
+[Output1]
+Name='Bonus'
+Range=[0 3]
+NumMFs=3
+MF1='Sedikit':'trimf',[0 0.5 1]
+MF2='Sedang':'trimf',[1 1.5 2]
+MF3='Banyak':'trimf',[2 2.5 3]
+
+[Rules]
+1 1, 1 (1) : 2
+2 0, 2 (1) : 2
+3 2, 3 (1) : 2
