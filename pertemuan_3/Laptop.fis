@@ -1,0 +1,73 @@
+[System]
+Name='Laptop'
+Type='mamdani'
+Version=2.0
+NumInputs=3
+NumOutputs=3
+NumRules=5
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='Performa'
+Range=[0 10]
+NumMFs=3
+MF1='Bagus':'gaussmf',[1.77 -8.327e-17]
+MF2='Biasa':'gaussmf',[1.77 5]
+MF3='Jelek':'gaussmf',[1.771 10]
+
+[Input2]
+Name='Berat'
+Range=[0 10]
+NumMFs=3
+MF1='Ringan':'gaussmf',[1.77 -8.327e-17]
+MF2='Sedang':'gaussmf',[1.77 5]
+MF3='Berat':'gaussmf',[1.771 10]
+
+[Input3]
+Name='Harga'
+Range=[0 10]
+NumMFs=3
+MF1='Murah':'gaussmf',[1.77 -8.327e-17]
+MF2='Sedang':'trapmf',[1.25 3.64 6.67989417989418 8.75]
+MF3='Mahal':'gaussmf',[1.771 10]
+
+[Output1]
+Name='Casual'
+Range=[0 10]
+NumMFs=5
+MF1='Not':'trimf',[0 1 2]
+MF2='Least':'trimf',[2 3 4]
+MF3='Recommended':'trimf',[4 5 6]
+MF4='Very':'trimf',[6 7 8]
+MF5='Extremely':'trimf',[8 9 10]
+
+[Output2]
+Name='Gaming'
+Range=[0 10]
+NumMFs=5
+MF1='Not':'trimf',[0 1 2]
+MF2='Least':'trimf',[2 3 4]
+MF3='Recommended':'trimf',[4 5 6]
+MF4='Extremely':'trimf',[8 9 10]
+MF5='Very':'trimf',[6 7 8]
+
+[Output3]
+Name='Business'
+Range=[0 10]
+NumMFs=5
+MF1='Not':'trimf',[0 1 2]
+MF2='Least':'trimf',[2 3 4]
+MF3='Recommended':'trimf',[4 5 6]
+MF4='Very':'trimf',[6 7 8]
+MF5='Extremely':'trimf',[8 9 10]
+
+[Rules]
+1 3 0, 1 4 2 (1) : 1
+2 2 2, 3 2 2 (1) : 2
+3 0 1, 5 1 1 (1) : 2
+1 1 3, 1 3 5 (1) : 1
+0 0 -3, 5 0 0 (1) : 1
