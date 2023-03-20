@@ -218,7 +218,7 @@ sw = str2double(inputSW);
 pl = str2double(inputPL);
 pw = str2double(inputPW);
 k = str2double(inputK);
-
+Z
 sample = [sl sw pl pw]; % Membuat vektor
 
 % Data training

@@ -1,0 +1,54 @@
+[System]
+Name='fuzzy_123210078'
+Type='mamdani'
+Version=2.0
+NumInputs=3
+NumOutputs=1
+NumRules=7
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='Kualitas_Makanan'
+Range=[0 100]
+NumMFs=3
+MF1='buruk':'trimf',[-40 0 40]
+MF2='biasa':'trimf',[15 50 85]
+MF3='luar_biasa':'trimf',[60 100 140]
+
+[Input2]
+Name='Kecepatan_Pelayanan'
+Range=[0 30]
+NumMFs=2
+MF1='cepat':'trapmf',[0 0 5 20]
+MF2='lambat':'trapmf',[10 25 30 30]
+
+[Input3]
+Name='Harga'
+Range=[0 100]
+NumMFs=3
+MF1='murah':'trimf',[-40 0 40]
+MF2='normal':'trimf',[20 50 80]
+MF3='mahal':'trimf',[60 100 100]
+
+[Output1]
+Name='Kepuasan'
+Range=[0 10]
+NumMFs=5
+MF1='sangat_tidak_puas':'trimf',[0 0.5 1]
+MF2='tidak_puas':'trimf',[1 2 3]
+MF3='cukup_puas':'trimf',[3 5 7]
+MF4='puas':'trimf',[7 8 9]
+MF5='sangat_puas':'trimf',[9 9.5 10]
+
+[Rules]
+2 0 2, 3 (1) : 2
+1 0 0, 1 (1) : 2
+0 2 0, 1 (1) : 2
+0 0 3, 1 (1) : 2
+3 0 0, 5 (1) : 2
+0 1 0, 5 (1) : 2
+0 0 1, 5 (1) : 2
