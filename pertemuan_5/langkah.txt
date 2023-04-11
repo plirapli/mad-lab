@@ -1,0 +1,9 @@
+Langkah:
+1. Membaca data latih dengan readcell terus dikonversi ke matrix pake cell2mat
+2. Membaca target latih dengan readcell terus dikonversi ke matrix pake cell2mat
+3. Membuat perceptron dengan fungsi newp
+4. Melakukan simulasi dengan sim
+5. Melakukan pengecekan error dengan mengurangi simulasi dengan target latih
+6. Melakukan training biar ga bego sehingga menghasilkan weight dan bias
+7. Melakukan simulasi ulang dengan menggunakan perceptron hasil training dan data latih
+8. Melaukan simulasi menggunakan perceptron yang baru dan data uji coba
