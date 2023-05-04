@@ -95,7 +95,7 @@ clc;
 
 %% Menghitung Hasil Akhir
 % Membuat matriks berdasarkan hasil eigen vector alternatif tadi
-w_Matriks = [ w_Gaya w_Keandalan w_Keekonomisan  ];
+w_Matriks = [ w_Gaya w_Keandalan w_Keekonomisan  ]
 
 disp('Nilai akhir untuk Yamaha, Honda, Suzuki, Kawasaki');
 MC_Scores = w_Matriks * w_Kriteria
